@@ -15,7 +15,7 @@ export function MobileHeader() {
         <Link href="/" className="flex items-center hover:opacity-90 transition-opacity">
           {/* Enhanced logo with proper sizing */}
           <img 
-            src="/logo.svg" 
+            src="/logo-transparent.png" 
             alt="Vidaripay" 
             className="h-12 w-auto min-w-[120px]" 
           />
