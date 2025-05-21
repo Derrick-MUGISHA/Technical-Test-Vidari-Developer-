@@ -10,7 +10,6 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Vidaripay - Bill Payment Platform",
   description: "Pay your bills, buy airtime, and purchase gift cards with ease",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({

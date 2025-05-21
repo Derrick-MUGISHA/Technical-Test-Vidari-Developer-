@@ -14,7 +14,7 @@ import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 
 export default function AirtimeForm() {
-  const [phoneNumber, setPhoneNumber] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState<string | undefined>("");
   const [amount, setAmount] = useState("");
   const [selectedCountry, setSelectedCountry] = useState("NG");
   const [loading, setLoading] = useState(false);
@@ -152,8 +152,8 @@ export default function AirtimeForm() {
                 key={provider.id}
                 className={`border rounded-lg p-3 cursor-pointer transition-all flex flex-col items-center justify-center ${
                   selectedProvider === provider.id
-                    ? "border-purple-600 bg-purple-50"
-                    : "border-gray-200 hover:border-purple-300"
+                    ? "border-[#41BC3F] bg-[#e6f4ea]"
+                    : "border-gray-200 hover:border-[#D86411]"
                 }`}
                 onClick={() => setSelectedProvider(provider.id)}
               >
@@ -177,9 +177,9 @@ export default function AirtimeForm() {
               international
               defaultCountry="NG"
               value={phoneNumber}
-              onChange={setPhoneNumber as (value: string) => void}
+              onChange={setPhoneNumber}
               countries={["NG", "RW", "GH", "KE"]}
-              className="focus:ring-purple-500 focus:border-purple-500"
+              className="focus:ring-[#41BC3F] focus:border-[#41BC3F]"
             />
           </div>
           <p className="text-xs text-gray-500 mt-1">
@@ -196,7 +196,7 @@ export default function AirtimeForm() {
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             required
-            className="focus:ring-purple-500 focus:border-purple-500"
+            className="focus:ring-[#41BC3F] focus:border-[#41BC3F]"
           />
 
           <div className="grid grid-cols-4 gap-2 mt-2">
@@ -208,8 +208,8 @@ export default function AirtimeForm() {
                 onClick={() => setAmount(quickAmount.value)}
                 className={
                   amount === quickAmount.value
-                    ? "border-purple-600 bg-purple-50"
-                    : ""
+                    ? "border-[#41BC3F] bg-[#e6f4ea]"
+                    : "hover:border-[#D86411]"
                 }
               >
                 {quickAmount.label}
@@ -245,7 +245,7 @@ export default function AirtimeForm() {
 
       <Button
         type="submit"
-        className="w-full bg-purple-600 hover:bg-purple-700 text-white"
+        className="w-full bg-[#41BC3F] hover:bg-[#3aa83a] text-white"
         disabled={
           loading ||
           success ||
