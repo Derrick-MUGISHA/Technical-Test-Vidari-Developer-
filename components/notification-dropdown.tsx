@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { ComponentProps, useState } from "react"
 import { Bell } from "lucide-react"
 import {
   DropdownMenu,
@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Button } from "@/components/ui/button"
 
-export function NotificationDropdown() {
+export function NotificationDropdown({ className }: ComponentProps<"div">) {
   const [notificationCount, setNotificationCount] = useState(3)
 
   const notifications = [
