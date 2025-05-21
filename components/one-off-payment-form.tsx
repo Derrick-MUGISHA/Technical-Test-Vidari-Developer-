@@ -50,7 +50,7 @@ export default function OneOffPaymentForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+ <form onSubmit={handleSubmit} className="space-y-6">
       <div className="space-y-4">
         <div className="space-y-2">
           <Label htmlFor="recipientName">Recipient Name</Label>
@@ -60,7 +60,7 @@ export default function OneOffPaymentForm() {
             value={recipientName}
             onChange={(e) => setRecipientName(e.target.value)}
             required
-            className="focus:ring-purple-500 focus:border-purple-500"
+            className="focus:ring-[#41BC3F] focus:border-[#41BC3F]"
           />
         </div>
 
@@ -73,7 +73,7 @@ export default function OneOffPaymentForm() {
             value={recipientEmail}
             onChange={(e) => setRecipientEmail(e.target.value)}
             required
-            className="focus:ring-purple-500 focus:border-purple-500"
+            className="focus:ring-[#41BC3F] focus:border-[#41BC3F]"
           />
         </div>
 
@@ -86,7 +86,7 @@ export default function OneOffPaymentForm() {
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             required
-            className="focus:ring-purple-500 focus:border-purple-500"
+            className="focus:ring-[#41BC3F] focus:border-[#41BC3F]"
           />
         </div>
 
@@ -98,7 +98,7 @@ export default function OneOffPaymentForm() {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             rows={3}
-            className="focus:ring-purple-500 focus:border-purple-500"
+            className="focus:ring-[#41BC3F] focus:border-[#41BC3F]"
           />
         </div>
 
@@ -124,7 +124,7 @@ export default function OneOffPaymentForm() {
 
       <Button
         type="submit"
-        className="w-full bg-purple-600 hover:bg-purple-700 text-white"
+        className="w-full bg-[#41BC3F] hover:bg-[#3aa83a] text-white shadow-md hover:shadow-lg transition-all"
         disabled={loading || success || !recipientName || !recipientEmail || !amount || !selectedPaymentMethod}
       >
         {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
