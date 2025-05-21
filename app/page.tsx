@@ -22,30 +22,11 @@ export default function Home() {
           <p className="text-gray-600 text-center mb-8">Quick and secure payments for airtime, gift cards, and more</p>
 
           <Tabs defaultValue="airtime" className="w-full">
-            <TabsList className="flex md:grid md:grid-cols-3 overflow-x-auto gap-1 md:gap-2 mb-6 md:mb-8 no-scrollbar">
-              <TabsTrigger 
-                value="airtime" 
-                className="flex-shrink-0 whitespace-nowrap min-w-[120px] md:min-w-0 
-                          text-sm md:text-base px-3 md:px-4 py-2"
-              >
-                Airtime
-              </TabsTrigger>
-              <TabsTrigger 
-                value="giftcards" 
-                className="flex-shrink-0 whitespace-nowrap min-w-[120px] md:min-w-0 
-                          text-sm md:text-base px-3 md:px-4 py-2"
-              >
-                Gift Cards
-              </TabsTrigger>
-              <TabsTrigger 
-                value="oneoff" 
-                className="flex-shrink-0 whitespace-nowrap min-w-[120px] md:min-w-0 
-                          text-sm md:text-base px-3 md:px-4 py-2"
-              >
-                One-off Payment
-              </TabsTrigger>
+            <TabsList className="grid grid-cols-3 mb-8">
+              <TabsTrigger value="airtime">Airtime</TabsTrigger>
+              <TabsTrigger value="giftcards">Gift Cards</TabsTrigger>
+              <TabsTrigger value="oneoff">One-off Payment</TabsTrigger>
             </TabsList>
-            
             <TabsContent value="airtime">
               <AirtimeForm />
             </TabsContent>
