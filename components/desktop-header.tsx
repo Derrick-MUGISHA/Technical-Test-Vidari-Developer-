@@ -9,7 +9,7 @@ export function DesktopHeader() {
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center space-x-8">
           <Link href="/" className="flex items-center">
-            <img src="/logo.svg" alt="Vidaripay" className="h-10" />
+            <img src="/logo.svg" alt="Vidaripay" className="h-20 w-auto" />
           </Link>
           <nav className="hidden md:flex items-center space-x-6">
             <Link href="/" className="flex items-center text-gray-600 hover:text-purple-600 transition-colors">

@@ -53,7 +53,7 @@ export default function CountrySelector({ selectedCountry, onCountryChange }: Co
           >
             {selectedCountryData ? (
               <div className="flex items-center">
-                <span className="mr-2 text-lg">{selectedCountryData.flag}</span>
+                {/* <span className="mr-2 text-lg">{selectedCountryData.flag}</span> */}
                 <span>{selectedCountryData.label}</span>
                 <span className="ml-2 text-gray-500">{selectedCountryData.code}</span>
               </div>
