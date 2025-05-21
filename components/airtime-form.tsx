@@ -59,8 +59,8 @@ export default function AirtimeForm() {
   // Telecom providers by country
   const providers = {
     NG: [
-      { id: "mtn-ng", name: "MTN Nigeria", logo: "/placeholder.svg?height=40&width=40" },
-      { id: "airtel-ng", name: "Airtel Nigeria", logo: "/placeholder.svg?height=40&width=40" },
+      { id: "mtn-ng", name: "MTN Nigeria", logo: "https://techafricanews.com/wp-content/uploads/2024/11/MTN-PR-54.jpg" },
+      { id: "airtel-ng", name: "Airtel Nigeria", logo: "https://campuscybercafe.s3.amazonaws.com/assets/images/post/2024-10-24/1729725195-airtel-sme-data-api-integration-nigeria.png?" },
       { id: "glo", name: "Glo", logo: "/placeholder.svg?height=40&width=40" },
       { id: "9mobile", name: "9Mobile", logo: "/placeholder.svg?height=40&width=40" },
     ],
