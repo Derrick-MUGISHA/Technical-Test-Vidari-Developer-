@@ -19,8 +19,8 @@ export default function SupportPage() {
 
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         <div className="text-center mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">How Can We Help You?</h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-purple-900">How Can We Help You?</h1>
+          <p className="text-[#D86411] max-w-2xl mx-auto">
             Our support team is here to assist you with any questions or issues you may have.
           </p>
         </div>
@@ -28,7 +28,7 @@ export default function SupportPage() {
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           <Card>
             <CardHeader className="text-center">
-              <Mail className="w-10 h-10 mx-auto text-purple-600 mb-2" />
+              <Mail className="w-10 h-10 mx-auto text-[#D86411] mb-2 " />
               <CardTitle>Email Support</CardTitle>
               <CardDescription>Get help via email</CardDescription>
             </CardHeader>
@@ -37,13 +37,13 @@ export default function SupportPage() {
               <p className="text-sm text-gray-500 mt-2">Response within 24 hours</p>
             </CardContent>
             <CardFooter>
-              <Button className="w-full bg-purple-600 hover:bg-purple-700">Send Email</Button>
+              <Button className="w-full bg-[#41BC3F] hover:bg-[#3aa83a]">Send Email</Button>
             </CardFooter>
           </Card>
 
           <Card>
             <CardHeader className="text-center">
-              <Phone className="w-10 h-10 mx-auto text-purple-600 mb-2" />
+              <Phone className="w-10 h-10 mx-auto text-[#D86411] mb-2" />
               <CardTitle>Phone Support</CardTitle>
               <CardDescription>Talk to a representative</CardDescription>
             </CardHeader>
@@ -52,13 +52,13 @@ export default function SupportPage() {
               <p className="text-sm text-gray-500 mt-2">Mon-Fri, 9am-5pm WAT</p>
             </CardContent>
             <CardFooter>
-              <Button className="w-full bg-purple-600 hover:bg-purple-700">Call Now</Button>
+              <Button className="w-full bg-[#41BC3F] hover:bg-[#3aa83a]">Call Now</Button>
             </CardFooter>
           </Card>
 
           <Card>
             <CardHeader className="text-center">
-              <MessageSquare className="w-10 h-10 mx-auto text-purple-600 mb-2" />
+              <MessageSquare className="w-10 h-10 mx-auto text-[#D86411] mb-2" />
               <CardTitle>Live Chat</CardTitle>
               <CardDescription>Chat with our support team</CardDescription>
             </CardHeader>
@@ -67,7 +67,7 @@ export default function SupportPage() {
               <p className="text-sm text-gray-500 mt-2">Typical response in minutes</p>
             </CardContent>
             <CardFooter>
-              <Button className="w-full bg-purple-600 hover:bg-purple-700">Start Chat</Button>
+              <Button className="w-full bg-[#41BC3F] hover:bg-[#3aa83a]">Start Chat</Button>
             </CardFooter>
           </Card>
         </div>
@@ -143,7 +143,7 @@ export default function SupportPage() {
                 </label>
                 <Textarea id="message" placeholder="Please describe your issue in detail" rows={5} />
               </div>
-              <Button type="submit" className="w-full bg-purple-600 hover:bg-purple-700">
+              <Button type="submit" className="w-full bg-[#41BC3F] hover:bg-[#3aa83a]">
                 Send Message
               </Button>
             </form>

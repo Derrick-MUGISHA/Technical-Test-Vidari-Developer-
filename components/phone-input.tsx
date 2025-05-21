@@ -137,7 +137,7 @@ export default function PhoneInput({ id, value, onChange, country, required }: P
         onChange={handleChange}
         placeholder={`${countryCodes[country] || "+"} Phone number`}
         required={required}
-        className="focus:ring-purple-500 focus:border-purple-500"
+        className="focus:ring-[#41BC3F] focus:border-[#41BC3F]"
       />
     </div>
   )

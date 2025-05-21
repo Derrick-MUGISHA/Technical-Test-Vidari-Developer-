@@ -33,7 +33,7 @@ export default function SignInPage() {
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <Label htmlFor="password">Password</Label>
-                <Link href="/forgot-password" className="text-sm text-purple-600 hover:text-purple-700">
+                <Link href="/forgot-password" className="text-sm text-[#D86411] hover:text-orange-700 ">
                   Forgot password?
                 </Link>
               </div>
@@ -45,7 +45,7 @@ export default function SignInPage() {
                 Remember me for 30 days
               </label>
             </div>
-            <Button type="submit" className="w-full bg-purple-600 hover:bg-purple-700">
+            <Button type="submit" className="w-full bg-[#41BC3F] hover:bg-[#3aa83a]">
               Sign In
             </Button>
             <div className="relative">
@@ -70,7 +70,7 @@ export default function SignInPage() {
           <CardFooter className="flex flex-col space-y-4">
             <div className="text-center text-sm">
               Don't have an account?{" "}
-              <Link href="/get-started" className="text-purple-600 hover:text-purple-700 font-medium">
+              <Link href="/get-started" className="text-[#D86411] hover:text-orange-700 font-medium">
                 Sign up
               </Link>
             </div>
