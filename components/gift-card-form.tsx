@@ -53,8 +53,8 @@ export default function GiftCardForm() {
   }
 
   const giftCards = [
-    { id: "amazon", name: "Amazon", image: "/placeholder.svg?height=60&width=100", popular: true },
-    { id: "netflix", name: "Netflix", image: "/placeholder.svg?height=60&width=100", popular: true },
+    { id: "amazon", name: "Amazon", image: "https://huuray.com/wp-content/uploads/2023/02/amazon-gift-card-1.png", popular: true },
+    { id: "netflix", name: "Netflix", image: "https://www.shoppingexpress.com.au/assets/full/Netflix-30.jpg?20210318063033", popular: true },
     { id: "spotify", name: "Spotify", image: "/placeholder.svg?height=60&width=100", popular: true },
     { id: "apple", name: "Apple", image: "/placeholder.svg?height=60&width=100", popular: true },
     { id: "google", name: "Google Play", image: "/placeholder.svg?height=60&width=100", popular: true },
@@ -91,8 +91,8 @@ export default function GiftCardForm() {
                   key={card.id}
                   className={`border rounded-lg p-4 cursor-pointer transition-all flex flex-col items-center justify-center ${
                     selectedCard === card.id
-                      ? "border-purple-600 bg-purple-50"
-                      : "border-gray-200 hover:border-purple-300"
+                      ? "border-[#41BC3F] bg-[#e6f4ea]"
+                      : "border-gray-200 hover:border-[#D86411]"
                   }`}
                   onClick={() => setSelectedCard(card.id)}
                 >
@@ -113,8 +113,8 @@ export default function GiftCardForm() {
                   key={card.id}
                   className={`border rounded-lg p-3 cursor-pointer transition-all flex flex-col items-center justify-center ${
                     selectedCard === card.id
-                      ? "border-purple-600 bg-purple-50"
-                      : "border-gray-200 hover:border-purple-300"
+                      ? "border-[#41BC3F] bg-[#e6f4ea]"
+                      : "border-gray-200 hover:border-[#D86411]"
                   }`}
                   onClick={() => setSelectedCard(card.id)}
                 >
@@ -148,7 +148,7 @@ export default function GiftCardForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="focus:ring-purple-500 focus:border-purple-500"
+            className="focus:ring-[#41BC3F] focus:border-[#41BC3F]"
           />
         </div>
 
@@ -174,7 +174,7 @@ export default function GiftCardForm() {
 
       <Button
         type="submit"
-        className="w-full bg-purple-600 hover:bg-purple-700 text-white"
+        className="w-full bg-[#41BC3F] hover:bg-[#3aa83a] text-white shadow-md hover:shadow-lg transition-all"
         disabled={loading || success || !email || !selectedCard || !selectedAmount || !selectedPaymentMethod}
       >
         {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
