@@ -11,10 +11,10 @@ export function DesktopHeader() {
           <Link href="/" className="flex items-center hover:opacity-90 transition-opacity">
             {/* Logo with improved visibility */}
             <img 
-              src="/logo.svg" 
+              src="/logo-transparent.png" 
               alt="Vidaripay" 
               className="h-16 w-auto"  // Slightly reduced height for better proportion
-              style={{ minWidth: '160px' }} // Ensure logo never gets too small
+              style={{ minWidth: '100px' }} // Ensure logo never gets too small
             />
           </Link>
           <nav className="hidden md:flex items-center space-x-6">
