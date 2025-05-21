@@ -10,6 +10,10 @@ import PhoneInput from "react-phone-number-input"
 import "react-phone-number-input/style.css"
 
 export default function GetStartedPage() {
+  const handlePhoneInputChange = (value: string) => {
+  // Your logic to handle phone number input changes
+};
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <div className="hidden md:block">
@@ -50,6 +54,7 @@ export default function GetStartedPage() {
                   defaultCountry="NG"
                   placeholder="Enter phone number"
                   className="focus:ring-purple-500 focus:border-purple-500"
+                  onChange={handlePhoneInputChange}
                 />
               </div>
             </div>

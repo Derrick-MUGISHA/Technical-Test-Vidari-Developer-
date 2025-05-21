@@ -1,22 +1,25 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 
-import { CreditCard, Wallet, Landmark } from "lucide-react"
-import { Label } from "@/components/ui/label"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import { CreditCard, Wallet, Landmark } from "lucide-react";
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 interface PaymentMethodsProps {
-  selectedMethod: string
-  onMethodChange: (method: string) => void
+  selectedMethod: string;
+  onMethodChange: (method: string) => void;
 }
 
-export default function PaymentMethods({ selectedMethod, onMethodChange }: PaymentMethodsProps) {
+export default function PaymentMethods({
+  selectedMethod,
+  onMethodChange,
+}: PaymentMethodsProps) {
   const paymentMethods = [
     { id: "card", name: "Credit/Debit Card", icon: CreditCard },
     { id: "bank", name: "Bank Transfer", icon: Landmark },
     { id: "wallet", name: "Digital Wallet", icon: Wallet },
-  ]
+  ];
 
   return (
     <div className="space-y-2">
@@ -24,10 +27,14 @@ export default function PaymentMethods({ selectedMethod, onMethodChange }: Payme
       <RadioGroup value={selectedMethod} onValueChange={onMethodChange}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {paymentMethods.map((method) => {
-            const Icon = method.icon
+            const Icon = method.icon;
             return (
               <div key={method.id} className="flex items-center">
-                <RadioGroupItem value={method.id} id={`payment-${method.id}`} className="peer sr-only" />
+                <RadioGroupItem
+                  value={method.id}
+                  id={`payment-${method.id}`}
+                  className="peer sr-only"
+                />
                 <Label
                   htmlFor={`payment-${method.id}`}
                   className="flex items-center gap-3 w-full p-4 border rounded-lg cursor-pointer transition-all peer-data-[state=checked]:border-purple-600 peer-data-[state=checked]:bg-purple-50 hover:bg-gray-50"
@@ -36,7 +43,7 @@ export default function PaymentMethods({ selectedMethod, onMethodChange }: Payme
                   <span>{method.name}</span>
                 </Label>
               </div>
-            )
+            );
           })}
         </div>
       </RadioGroup>
@@ -54,11 +61,19 @@ export default function PaymentMethods({ selectedMethod, onMethodChange }: Payme
           <div className="grid grid-cols-2 gap-4">
             <div className="grid gap-2">
               <Label htmlFor="expiry">Expiry Date</Label>
-              <Input id="expiry" placeholder="MM/YY" className="focus:ring-purple-500 focus:border-purple-500" />
+              <Input
+                id="expiry"
+                placeholder="MM/YY"
+                className="focus:ring-purple-500 focus:border-purple-500"
+              />
             </div>
             <div className="grid gap-2">
               <Label htmlFor="cvc">CVC</Label>
-              <Input id="cvc" placeholder="123" className="focus:ring-purple-500 focus:border-purple-500" />
+              <Input
+                id="cvc"
+                placeholder="123"
+                className="focus:ring-purple-500 focus:border-purple-500"
+              />
             </div>
           </div>
         </div>
@@ -67,7 +82,8 @@ export default function PaymentMethods({ selectedMethod, onMethodChange }: Payme
       {selectedMethod === "bank" && (
         <div className="mt-4 p-4 bg-gray-50 rounded-lg">
           <p className="text-sm text-gray-600">
-            Select your bank from the list below to proceed with bank transfer payment.
+            Select your bank from the list below to proceed with bank transfer
+            payment.
           </p>
           <Select>
             <SelectTrigger className="mt-2 focus:ring-purple-500 focus:border-purple-500">
@@ -88,30 +104,54 @@ export default function PaymentMethods({ selectedMethod, onMethodChange }: Payme
 
       {selectedMethod === "wallet" && (
         <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-          <p className="text-sm text-gray-600">Choose your preferred digital wallet to complete this payment.</p>
+          <p className="text-sm text-gray-600">
+            Choose your preferred digital wallet to complete this payment.
+          </p>
           <div className="grid grid-cols-2 gap-2 mt-2">
             <Button variant="outline" className="justify-start">
-              <img src="/placeholder.svg?height=20&width=20" alt="PayPal" className="mr-2 h-5 w-5" />
+              <img
+                src="/placeholder.svg?height=20&width=20"
+                alt="PayPal"
+                className="mr-2 h-5 w-5"
+              />
               PayPal
             </Button>
             <Button variant="outline" className="justify-start">
-              <img src="/placeholder.svg?height=20&width=20" alt="Apple Pay" className="mr-2 h-5 w-5" />
+              <img
+                src="https://st4.depositphotos.com/5225467/20987/i/1600/depositphotos_209876646-stock-photo-paypal-logo-printed-white-paper.jpg"
+                alt="Apple Pay"
+                className="mr-2 h-5 w-5"
+              />
               Apple Pay
             </Button>
             <Button variant="outline" className="justify-start">
-              <img src="/placeholder.svg?height=20&width=20" alt="Google Pay" className="mr-2 h-5 w-5" />
+              <img
+                src="https://brandlogos.net/wp-content/uploads/2021/10/google-pay-logo-symbol-768x768.png"
+                alt="Google Pay"
+                className="mr-2 h-5 w-5"
+              />
               Google Pay
             </Button>
             <Button variant="outline" className="justify-start">
-              <img src="/placeholder.svg?height=20&width=20" alt="Mobile Money" className="mr-2 h-5 w-5" />
+              <img
+                src="https://seeklogo.com/images/M/mobilepay-logo-3C8DA59ADA-seeklogo.com.png"
+                alt="Mobile Money"
+                className="mr-2 h-5 w-5"
+              />
               Mobile Money
             </Button>
           </div>
         </div>
       )}
     </div>
-  )
+  );
 }
 
-import { Input } from "@/components/ui/input"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
