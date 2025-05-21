@@ -49,7 +49,7 @@ export default function CountrySelector({ selectedCountry, onCountryChange }: Co
             variant="outline"
             role="combobox"
             aria-expanded={open}
-            className="w-full justify-between focus:ring-purple-500 focus:border-purple-500"
+            className="w-full justify-between focus:ring-[#41BC3F] focus:border-[#41BC3F] hover:border-[#D86411]"
           >
             {selectedCountryData ? (
               <div className="flex items-center">
@@ -79,6 +79,7 @@ export default function CountrySelector({ selectedCountry, onCountryChange }: Co
                         onCountryChange(country.value)
                         setOpen(false)
                       }}
+                       className="aria-selected:bg-[#e6f4ea] aria-selected:text-[#41BC3F]"
                     >
                       <div className="flex items-center">
                         <span className="mr-2 text-lg">{country.flag}</span>
