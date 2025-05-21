@@ -98,7 +98,7 @@ export default function GiftCardForm() {
     {
       id: "playstation",
       name: "PlayStation",
-      image: "/placeholder.svg?height=60&width=100",
+      image: "https://i5.walmartimages.com/seo/PlayStation-Store-25-eGift-Card-Digital_e7db1c03-a2fd-4eec-978b-93494cd98afd.f2e47fa7464d1180f35f30d8c306f406.png?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
       popular: false,
     },
     {

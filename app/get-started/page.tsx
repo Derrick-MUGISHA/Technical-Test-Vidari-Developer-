@@ -204,11 +204,11 @@ export default function GetStartedPage() {
                 />
                 <label htmlFor="terms" className={`text-sm ${errors.terms ? "text-red-500" : "text-gray-600"}`}>
                   I agree to the{" "}
-                  <Link href="/terms" className="text-purple-600 hover:text-purple-700">
+                  <Link href="/terms" className="text-[#D86411] hover:text-orange-700">
                     Terms of Service
                   </Link>{" "}
                   and{" "}
-                  <Link href="/privacy" className="text-purple-600 hover:text-purple-700">
+                  <Link href="/privacy" className="text-[#D86411] hover:text-orange-700">
                     Privacy Policy
                   </Link>
                 </label>
@@ -224,7 +224,7 @@ export default function GetStartedPage() {
 
               <Button
                 type="submit"
-                className="w-full bg-purple-600 hover:bg-purple-700 text-white"
+                className="w-full bg-[#41BC3F] hover:bg-[#3aa83a] text-white"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? "Creating Account..." : "Create Account"}
@@ -253,7 +253,7 @@ export default function GetStartedPage() {
           <CardFooter className="flex flex-col space-y-4">
             <div className="text-center text-sm">
               Already have an account?{" "}
-              <Link href="/signin" className="text-purple-600 hover:text-purple-700 font-medium">
+              <Link href="/signin" className="text-[#D86411] hover:text-orange-700 font-medium">
                 Sign in
               </Link>
             </div>
